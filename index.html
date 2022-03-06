@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Will have a header for "Checkout" Title. 
+        Will have a main. In main, we will have a section
+        for left side(the form div) and will have aside for the right
+        side(the items div). 
+        Inside the form div, will create Contact info div and Shipping address div. 
+        Within those divs will group similar input types into class names with divs.
+        For items div, we will have divs for each item info and the 
+        cost info. Will divide each item into img div, item info
+        div, and quantity of item div.
+        Cart div will wrap the item divs and cost div. -->
+    <header>
+      <h1>Checkout</h1>
+    </header>
+    <main>
+      <section>
+        <form>
+          <div id="contact-info">
+            <h2 class="form-header">Contact Information</h2>
+            <div class="text-inputs">
+              <label for="email">Email</label>
+              <div class="icon-and-input">
+                <i class="fa-solid fa-envelope"></i>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email..."
+                  required
+                />
+              </div>
+            </div>
+            <div class="text-inputs">
+              <label for="phone">Phone</label>
+              <div class="icon-and-input">
+                <i class="fa-solid fa-phone"></i>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Enter your phone..."
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div id="shipping-address">
+            <h2 class="form-header">Shipping Address</h2>
+            <div class="text-inputs">
+              <label for="name">Full Name</label>
+              <div class="icon-and-input">
+                <i class="fa-solid fa-user"></i>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your Full name..."
+                  required
+                />
+                <i></i>
+              </div>
+            </div>
+            <div class="text-inputs">
+              <label for="address">Address</label>
+              <div class="icon-and-input">
+                <i class="fa-solid fa-house-chimney"></i>
+                <input
+                  type="text"
+                  id="address"
+                  placeholder="Enter your address..."
+                  required
+                />
+              </div>
+            </div>
+            <div class="text-inputs">
+              <label for="name">City</label>
+              <div class="icon-and-input">
+                <i class="fa-solid fa-city"></i>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your city..."
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- The following are horizontally aligned forms-->
+            <div id="country-and-postal">
+              <div id="dropdown-country">
+                <label for="countries">Country</label>
+                <div class="icon-and-input">
+                  <i id="country-icon" class="fa-solid fa-earth-asia"></i>
+                  <select name="countries" id="countries" required>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Singapore">Singapore</option>
+                  </select>
+                </div>
+              </div>
+              <div id="postal">
+                <label for="postalcode">Post Code</label>
+                <div class="icon-and-input">
+                  <i id="postal-icon" class="fa-solid fa-envelopes-bulk"></i>
+                  <input
+                    type="text"
+                    id="postalcode"
+                    placeholder="Enter your postal code..."
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div id="checkbox">
+              <input type="checkbox" id="saveinfo" />
+              <label for="saveinfo">See this information next time</label>
+            </div>
+            <div id="continue-button-container">
+              <input id="continue-button" type="submit" value="Continue" />
+            </div>
+          </div>
+        </form>
+      </section>
+      <aside>
+        <div id="cart">
+          <div id="item-1">
+            <div id="bookbag-image-container">
+              <img src="images/bookbag.png" alt="A stylish bookbag" />
+            </div>
+            <div id="bookbag-info">
+              <div id="bookbag-name-and-price">
+                <span id="bookbag-name">Vintage Backbag</span>
+                <p id="bookbag-price">$54.99 <del>$94.99</del></p>
+              </div>
+              <div id="bookbag-quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+          <div id="item-2">
+            <div id="shoes-image-container">
+              <img src="images/shoes.png" alt="Stylish shoes" />
+            </div>
+            <div id="shoes-info">
+              <div id="shoes-name-and-price">
+                <p id="shoes-name">Levi Shoes</p>
+                <p id="shoes-price">$74.99 <del>$124.99</del></p>
+              </div>
+              <div id="shoes-quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+          <div id="cost">
+            <hr />
+            <div id="shipping-cost">
+              <p>Shipping</p>
+              <p>$19</p>
+            </div>
+            <hr />
+            <div id="total-cost">
+              <p>Total</p>
+              <p>$148.98</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
